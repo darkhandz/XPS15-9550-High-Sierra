@@ -304,10 +304,10 @@ kexts
 
 #### touristd进程耗电，耗流量
 
-我在surge一直看着这个家伙以2MB/s的速度在下载东西，永远不停止，这可能是个系统BUG，这个进程查了一下，似乎是做一些新机使用指引什么的，可以禁用。
+我在surge一直看着这个家伙以2MB/s的速度在下载东西，永远不停止，这可能是个系统BUG(升级到PB4 17A330h似乎没有这个BUG了)，这个进程我查了一下，似乎是做一些新机使用指引什么的，可以禁用。
 
 - 执行命令：`launchctl remove com.apple.touristd`
-- 执行命令：`sudo mv com.apple.touristd.plist com.apple.touristd.plist.bak`
+- 执行命令：`sudo mv /System/Library/LaunchAgents/com.apple.touristd.plist /System/Library/LaunchAgents/com.apple.touristd.plist.bak`
 
 #### 关闭Verbose
 
