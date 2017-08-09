@@ -651,51 +651,17 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>AirPortBrcm4360 - fcvo, 10.12.x (credit the-darkvoid)</string>
-				<key>Find</key>
-				<data>
-				gflSqgAAdSk=
-				</data>
+				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
 				<key>MatchOS</key>
-				<string>10.12.x</string>
+				<string>10.13.x</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>
-				gflSqgAAZpA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 5Ghz</string>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
-				<data>
-				QYP8/3QsSA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
+				<data>AQAAdSI=</data>
 				<key>Replace</key>
-				<data>
-				ZscGI2HrKw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>10.11.dp1+ BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok original</string>
-				<key>Find</key>
-				<data>
-				SIX/dEdIiwc=
-				</data>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
-				<key>Name</key>
-				<string>IOBluetoothFamily</string>
-				<key>Replace</key>
-				<data>
-				Qb4PAAAA60Q=
-				</data>
+				<data>AQAA6yI=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
