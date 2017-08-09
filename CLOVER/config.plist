@@ -14,6 +14,8 @@
 				<true/>
 				<key>FixHPET_0010</key>
 				<false/>
+				<key>FixHeaders_20000000</key>
+				<true/>
 				<key>FixIPIC_0040</key>
 				<true/>
 				<key>NewWay_80000000</key>
@@ -494,18 +496,6 @@
 				<string>SSDT</string>
 				<key>TableId</key>
 				<string>xh_rvp10</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>http://www.insanelymac.com/forum/topic/324194-pre-release-macos-high-sierra/page-38#entry2441580</string>
-				<key>Signature</key>
-				<string>MATS</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>the reason same as MATS</string>
-				<key>Signature</key>
-				<string>BGRT</string>
 			</dict>
 		</array>
 		<key>HaltEnabler</key>
