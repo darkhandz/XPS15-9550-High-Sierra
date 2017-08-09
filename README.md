@@ -22,7 +22,7 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 - ThunderBolt/USB-C/HDMI 应该不行（没设备测试）
 - 休眠会有系统分区数据崩溃风险
 - 低亮度会有轻微闪屏
-- 电量百分比不会自动刷新（等大神解决，估计是ACPIBatteryManager）
+- 电量百分比刷新不及时（等大神解决）
 
 ### 硬件准备
 
@@ -54,11 +54,13 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 
 右击TransMac，以管理员身份运行，然后看图操作，耐心等待几分钟，出现Restore Complete即为写入完成。
 （图片是旧教程里的，dmg名字请忽略）
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15008814357644.jpg)
 
 写完映像之后，U盘会变成两个分区，一个叫`EFI`的就是`U盘引导区`，里面存在**UEFI版本的Clover**；另外一个叫`U盘`的提示你未格式化，这个时候千万不要手贱去格式化，这是因为windows认不出macOS的文件系统而已，并不是里面没有东西。
 
 打开资源管理器，你可以大概浏览一下U盘`EFI`引导区目录结构：
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15008824001924.jpg)
 
 - 顶上的`AptioFix2`文件夹是我留给你备用的 
@@ -99,16 +101,19 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 ![](http://darkhandz.qiniudn.com/2017-07-27-15009443383614.jpg)
 
 选择文件的操作如下：
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15009450911043.jpg)
 
 
 然后把刚刚添加的`USB-Clover`选中，点击右边的上箭头把它置顶，然后`Apply`，`OK`，`Exit`：
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15008876062348.jpg)
 
 
 #### Clover引导
 
 如果一切顺利，笔记本重启后你可以进入到Clover引导画面了：
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15009452783378.jpg)
 
 
@@ -133,14 +138,17 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 现在保存，然后重启，再次进入Clover引导画面，选择安装图标，看看是否顺利进入满屏英文，两三分钟后进入安装界面，跳到下一节——`安装`。
 
 如果很不幸，选择安装图标后卡住在下面的画面，说明`168`这个数不适合你：
+
 ![1218-11](http://darkhandz.qiniudn.com/2017-07-08-1218-11.jpg)
 
 留意错误信息`Error allocating 0x13d3a pages at 0x0000000003f26000 ...`，记住`0x13d3a`这个数值，你将会面临本教程最艰难的部分。
 
 重启，再回到Clover引导画面，如下图，选取下面行的第一个图标，进入`UEFI Shell 64`界面：
+
 ![clover-1](http://darkhandz.qiniudn.com/2017-07-08-clover-1.png)
 
 当命令行准备好之后，输入`memmap`命令，输出如下图：
+
 ![1218-0](http://darkhandz.qiniudn.com/2017-07-08-1218-0.jpg)
 
 不同的内存容量和不同的BIOS版本，上图的数据是不同的，上图是我自行升级的海盗船16G内存在`1.2.18`BIOS下的情况。
@@ -166,6 +174,7 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 以上计算方法参考自 [@wmchris 的教程](https://github.com/wmchris/DellXPS15-9550-OSX/blob/master/Additional/slide_calc.md)，有修改。
 
 实测一下，在Clover启动画面，选`UEFI Shell 64`图标那行的第三个`Options`，如图，把`Boot Args`的`slide=168`改为`slide=80`（对这行按空格，就进入编辑模式了，用方向箭头移动光标），改完按回车，然后`Esc`键。（图片是以前截的显示slide=0，别在意）
+
 ![args](http://darkhandz.qiniudn.com/2017-07-08-clover-2.png)
 
 再次选择安装图标，一般来说你就能进入安装界面了，跳到下一小节——`slide注意`。
@@ -244,6 +253,7 @@ kexts
 ```
 
 然后把**U盘EFI的Clover**文件夹的这四个复制到**硬盘EFI的Clover**文件夹下：
+
 ![](http://darkhandz.qiniudn.com/2017-07-27-15009508543582.jpg)
 
 现在应该一切就绪了，重启系统，黑屏的时候拔掉U盘，耐心等待，Clover画面再次出现的话，说明硬盘Clover引导成功。
@@ -291,6 +301,13 @@ kexts
 它的作用嘛……我忘了，你稍后自行搜索呗？
 
 ### 其他
+
+#### touristd进程耗电，耗流量
+
+我在surge一直看着这个家伙以2MB/s的速度在下载东西，永远不停止，这可能是个系统BUG，这个进程查了一下，似乎是做一些新机使用指引什么的，可以禁用。
+
+- 执行命令：`launchctl remove com.apple.touristd`
+- 执行命令：`sudo mv com.apple.touristd.plist com.apple.touristd.plist.bak`
 
 #### 关闭Verbose
 
