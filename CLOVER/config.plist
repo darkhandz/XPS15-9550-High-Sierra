@@ -147,18 +147,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method GPRW,02 to Method XPRW,02 and need add-on  SSDT-PRW.aml</string>
-					<key>Find</key>
-					<data>
-					R1BSVwJwaA==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFBSVwJwaA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Rename HS12 -&gt; HS92 to avoid the patchmatic error, pair with SSDT-TB.aml</string>
 					<key>Find</key>
 					<data>
@@ -355,7 +343,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -369,7 +357,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(UPRW,2,..) to Method(XPRW,2,..), pair with SSDT-PRW.aml</string>
+					<string>change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
