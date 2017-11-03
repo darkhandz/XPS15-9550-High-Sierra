@@ -19,7 +19,6 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 - 独显不指望了
 - 无线5GHz达不到最高速度（我没具体测试过）
 - ThunderBolt/USB-C/HDMI 应该不行（没设备测试）
-- 休眠会有系统分区数据崩溃风险
 - 低亮度会有轻微闪屏
 - 电量百分比刷新不及时（等大神解决）
 
@@ -327,15 +326,9 @@ kexts
 
 在BIOS里禁用读卡器会更省电，反正我是很少在win用读卡器，在macOS更是没有驱动。
 
-#### 休眠（10.13未确定是否有问题）
+#### 禁止生成休眠文件
 
-10.11.x - 10.12.x 系统下都会有NVMe SSD系统分区数据崩溃的问题，**10.13我还不知道**。
-
-简单来说就是NVMe SSD的物理扇区一般有**4096字节**模式和**512字节**模式，比如**东芝XG3**同时支持两种模式（但出厂是512字节模式），而**三星的PM951，SM951**等只支持512字节模式。
-
-问题主要是，本来512字节模式的NVMe SSD在10.11或10.12的原生NVMe驱动下根本不显示的。用了Piker大神的NVMe破解补丁（或由此衍生的HackrNVMe*.kext）之后，NVMe SSD可以用了，但是在macOS系统`休眠唤醒后`，`有可能`会让整个系统分区数据损坏，导致必须重新安装系统，所以不建议512字节模式的进行休眠。
-
-如果你想知道你的NVMe SSD是否支持4K模式、怎样转换，可以看[这个教程](https://github.com/wmchris/DellXPS15-9550-OSX/blob/master/4k_sector.md)或[这个教程](http://www.insanelymac.com/forum/topic/312803-patch-for-using-nvme-under-macos-sierra-is-ready/page-50#entry2377304)，转换后就可以随便休眠了。
+简单来说就是SSD的写入寿命有限，而默认的休眠模式3会每次都把内存数据写入SSD（大概8G一次）。
 
 然后说说禁用休眠的命令，3条按顺序执行：
 
@@ -344,8 +337,6 @@ sudo pmset hibernatemode 0
 sudo rm /var/vm/sleepimage
 sudo mkdir /var/vm/sleepimage
 ```
-
-你可能还需要关闭`autopoweroff`，`standby`等，不过这个留待你去尝试了，我已走上了4K模式的康庄大道。
 
 #### 亮度不能保存
 
