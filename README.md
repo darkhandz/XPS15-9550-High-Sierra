@@ -17,7 +17,6 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 ### 安装完之后的一些问题
 
 - 独显不指望了
-- 睡眠唤醒后耳机麦克风会导致耳机播放不正常
 - 无线5GHz达不到最高速度（我没具体测试过）
 - ThunderBolt/USB-C/HDMI 应该不行（没设备测试）
 - 休眠会有系统分区数据崩溃风险
@@ -265,6 +264,7 @@ kexts
 我会跟进系统更新，把自己的最新配置更新上来github的，前提是我还没挂掉，而且还在用XPS15做`iOS开发`的话。
 
 ### 网卡顺序修正
+
 原理嘛，忘记了，如果顺序错了，就不能在App Store下载东西。
 
 打开`终端`，执行命令：`networksetup -listallhardwareports`，如下图，留意`en0`对应的`Port`是否**Wi-Fi**，如果是，说明顺序正确了，跳过本步骤。
@@ -277,18 +277,20 @@ kexts
 
 ### 安装其他辅助app
 
-我在`HS_Beta`或**我Repo提供的文件**里提供了一个叫`Other`的文件夹，里面有两个文件夹：`ALCPlugFix`和`VoodooPS2Daemon`，我们先来处理`ALCPlugFix`。
+我在`HS_Beta`或**我Repo提供的文件**里提供了一个叫`Other`的文件夹，里面有两个文件夹：`ComboJack`和`VoodooPS2Daemon`，我们先来处理`ComboJack`。
 
-#### ALCPlugFix
+#### ComboJack
 
-- 执行命令：`cd 把ALCPlugFix文件夹拖过来`
+- 执行命令：`cd 把ComboJack文件夹拖过来`
 - 执行命令：`chmod +x install.sh`
 - 执行命令：`./install.sh`
     
-    ![](http://darkhandz.qiniudn.com/2017-07-27-15009535837456.jpg)
+    ![](http://darkhandz.qiniudn.com/2017-11-03-132202.png)
 
+没提示错误的话，ComboJack就安装完成了。
 
-没提示错误的话，ALCPlugFix就安装完成了，顺带提一下它的作用：检测耳机拔插，通知CodecCommander发送特殊命令给系统，修正耳机单声道或杂音问题。作者[goodwin](https://github.com/goodwin/ALCPlugFix)。
+顺带提一下它的作用：检测耳机拔插，修复耳机孔多合一下产生的一些问题，关于它的原理，请看[wmchris的教程](https://github.com/wmchris/DellXPS15-9550-OSX/blob/master/10.12/Post-Install/AD-Kexts/Audio/VerbStub_knnspeed/README.md)。
+
 
 #### VoodooPS2Daemon
 
