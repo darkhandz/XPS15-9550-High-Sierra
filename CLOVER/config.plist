@@ -135,18 +135,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Device ALSD rename to ALS0 - credit syscl</string>
-					<key>Find</key>
-					<data>
-					QUxTRAhfSEk=
-					</data>
-					<key>Replace</key>
-					<data>
-					QUxTMAhfSEk=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Rename HS12 -&gt; HS92 to avoid the patchmatic error, pair with SSDT-TB.aml</string>
 					<key>Find</key>
 					<data>

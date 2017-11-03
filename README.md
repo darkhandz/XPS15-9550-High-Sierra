@@ -334,22 +334,6 @@ sudo rm /var/vm/sleepimage
 sudo mkdir /var/vm/sleepimage
 ```
 
-#### 亮度不能保存
-
-每次开机亮度都变成最亮档，很容易瞎，应该不是每个人都会遇到这种情况。
-
-不过一旦你遇上了，试试在config.plist的`SystemParameters`节点下增加一个`BacklightLevel`，值为字符串`0`，变成这样：
-
-```xml
-<key>SystemParameters</key>
-<dict>
-	<key>BacklightLevel</key>
-	<string>0</string>
-	<key>InjectKexts</key>
-	<string>Detect</string>
-</dict>
-```
-
 #### 原生NTFS读写
 
 1. 打开终端输入 `diskutil list` 查看所有分区的卷标（NAME列）
