@@ -242,6 +242,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - AD1984A - Version2</string>
+					<key>CodecID</key>
+					<integer>299112778</integer>
+					<key>ConfigData</key>
+					<data>ISccECEnHUAhJx4RIScfkCFHHCAhRx2QIUceoSFHHwIhVxwwIVcdMCFXHoEhVx8BIRccQCEXHUAhFx4hIRcfAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - ADI-1988B</string>
 					<key>CodecID</key>
 					<integer>299112843</integer>
@@ -309,6 +323,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>7</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300</string>
+					<key>CodecID</key>
+					<integer>283902497</integer>
+					<key>ConfigData</key>
+					<data>AUccIAFHHUABRx4BAUcfAQFHDAIBdxwQAXcdAQF3HhcBdx+QAXcMAgGnHEABpx0QAacegQGnHwIBtxwwAbcdMAG3HoEBtx8BAhccUAIXHRACFx4hAhcfAgIXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -440,6 +468,34 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC235 for Ienovo by soto2080</string>
+					<key>CodecID</key>
+					<integer>283902517</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHAEBJxygAScckAFHHAABRxwBAUccEAFHHJABlxwwAZccEAGXHIEBlxwCAhccIAIXHBACFxwhAhccAgF3HPABdx0AAXceAAF3H0ABhxzwAYcdAAGHHgABhx9AAacc8AGnHQABpx4AAacfQAG3HPABtx0AAbceAAG3H0AB1xzwAdcdAAHXHgAB1x9AAUcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - Realtek ALC236</string>
+					<key>CodecID</key>
+					<integer>283902518</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUceFwFHH5ABlxwwAZcdEAGXHoEBlx8EAhccQAIXHRACFx4hAhcfBAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Jake Lo - Realtek ALC236</string>
 					<key>CodecID</key>
 					<integer>283902518</integer>
@@ -449,6 +505,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom - Realtek ALC236 for Lenovi Air 13 Pro by rexx0520</string>
+					<key>CodecID</key>
+					<integer>283902518</integer>
+					<key>ConfigData</key>
+					<data>ASccAAEnHQEBJx6mAScfkAFHHBABRx0BAUceEAFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHCABlx2QAZceqwGXHwABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccMAIXHUACFx4rAhcfAAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -552,6 +622,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet ALC260 for Fujitsu Celsius M 450</string>
+					<key>CodecID</key>
+					<integer>283902560</integer>
+					<key>ConfigData</key>
+					<data>IPccECD3HUAg9x4RIPcfASD3DAIhhxwgIYcdYCGHHkQhhx8BITccQCE3HZAhNx6hITcfmSFHHFAhRx0wIUcegSFHHwEhVxxgIVcdQCFXHiEhVx8C</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom ALC260</string>
 					<key>CodecID</key>
 					<integer>283902560</integer>
@@ -575,6 +659,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Goldfish64 - ALC262 for HP Compaq dc7700 SFF</string>
+					<key>CodecID</key>
+					<integer>283902562</integer>
+					<key>ConfigData</key>
+					<data>AbccEAG3HUABtx4BAbcfAQFXHCABVx0QAVceIQFXHwIBZxwwAWcdAQFnHhMBZx+QAZccQAGXHTABlx6BAZcfAQGnHFABpx0QAacegQGnHwI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -773,6 +871,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>15</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>MacPeet - ALC269VB for Dell Optiplex 790 Version2</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>AbccIAG3HUABtx4RAbcfkAGHHDABhx2QAYceoQGHH5ABlxxAAZcdkAGXHoEBlx8BAhccUAIXHUACFx4hAhcfAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>16</integer>
 				</dict>
 				<dict>
 					<key>Codec</key>
@@ -2086,6 +2198,18 @@
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
+					<string>MacPeet ALC889 Medion P4020 D</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4hAUcfAQFHDAIBtxwgAbcdAAG3HhMBtx+QAeccMAHnHWAB5x5EAecfAQGXHFABlx0AAZceowGXH5ABpxxgAacdMAGnHoEBpx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904137</integer>
+					<key>Comment</key>
 					<string>alc889, Custom by Sergey_Galan</string>
 					<key>ConfigData</key>
 					<data>IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISceACEnH0AhRxwwIUcdQSFHHhEhRx8BIVcc8CFXHQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0AhdxzwIXcdACF3HgAhdx9AIYccECGHHZEhhx6gIYcfkCGXHCAhlx2QIZcegSGXHwEhpxzwIacdACGnHgAhpx9AIbccgCG3HUAhtx4hIbcfASHHHPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh1x9AIecckCHnHSEh5x5LIecfASH3HPAh9x0AIfceACH3H0A=</data>
@@ -2193,6 +2317,18 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
+					<string>ALC892 for Clevo P65xSE/SA by Derek Zhu</string>
+					<key>ConfigData</key>
+					<data>ASccEAEnHZEBJx6mAScfkAGHHCABhx1gAYcegQGHHwEBRxwwAUcdAQFHHhcBRx+QAbccQAG3HTABtx4hAbcfAQF3HFABdx1AAXceAQF3HwEB5xxgAecdYQHnHkUB5x8BALcccAC3HREAtx4WALcfkAFXHPABVx0AAVceAAFXHwQBZxzwAWcdAAFnHgABZx8EAZcc8AGXHQABlx4AAZcfBAGnHPABpx0AAaceAAGnHwQBxxzwAccdAAHHHgABxx8EAdcc8AHXHQAB1x4AAdcfBAH3HPAB9x0AAfceAAH3HwQBRwwCAbcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>31</integer>
 				</dict>
 				<dict>
 					<key>CodecID</key>
@@ -2319,6 +2455,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC898 for MSI GP62-6QG Leopard Pro</string>
+					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>ConfigData</key>
+					<data>ARcc8AEXHQABFx4AARcfQAEnHBABJx0BASceoAEnH5ABRxxQAUcdQAFHHiEBRx8BAUcMAgFXHEABVx0BAVceEAFXH5ABZxzwAWcdAAFnHgABZx9AAXcc8AF3HQABdx4AAXcfQAGHHCABhx2QAYcegQGHHwEBlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HPABtx0AAbceAAG3H0ABxxzwAccdAAHHHgABxx9AAdcc8AHXHQAB1x4AAdcfQAHnHHAB5x1BAeceRQHnHwEB9xzwAfcdAAH3HgAB9x9A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -2597,6 +2747,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Constanta custom for Toshiba L755-16R - Conexant CX20585</string>
+					<key>CodecID</key>
+					<integer>351359081</integer>
+					<key>ConfigData</key>
+					<data>AZccEAGXHRABlx4gAZcfAAGnHCABpx0wAacegQGnHwEBtxwwAbcdAAG3HgABtx9AAcccUAHHHQABxx4AAccfQAHXHGAB1x0AAdceAAHXH0AB5xxgAecdAAHnHgAB5x9AAfcccAH3HQAB9x4QAfcfkAIHHIACBx0AAgceAAIHH0ACJxyAAicdAAInHgACJx9AAjcckAI3HQECNx6gAjcfkA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -2889,6 +3053,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Goldfish64 - IDT 92HD81B1C5 for Dell Latitude E6410</string>
+					<key>CodecID</key>
+					<integer>287143637</integer>
+					<key>ConfigData</key>
+					<data>AKccIACnHRAApx6BAKcfBACnDAIAtxwwALcdEAC3HiEAtx8EALcMAgDHHPAAxx0AAMceAADHH0AA1xxAANcdAQDXHhcA1x+QANcMAgDnHPAA5x0AAOceAADnH0AA9xzwAPcdAAD3HgAA9x9AAQcc8AEHHQABBx4AAQcfQAEXHFABFx0BARceoAEXH5AB9xzwAfcdAAH3HgAB9x9AAgcc8AIHHQACBx4AAgcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

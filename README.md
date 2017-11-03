@@ -318,10 +318,6 @@ kexts
 <string>kext-dev-mode=1 dart=0 nv_disable=1 -v</string>
 ```
 
-#### 有时觉得WiFi很慢
-
-节能器里面的`唤醒以供 WiFi 网络访问`不要勾选。
-
 #### 关掉SDCard Reader
 
 在BIOS里禁用读卡器会更省电，反正我是很少在win用读卡器，在macOS更是没有驱动。
