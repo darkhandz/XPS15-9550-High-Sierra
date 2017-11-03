@@ -18,9 +18,8 @@ DW1830是免驱的，如果你的无线网卡是Killer的，那就很不幸了�
 
 - 独显不指望了
 - 无线5GHz达不到最高速度（我没具体测试过）
-- ThunderBolt/USB-C/HDMI 应该不行（没设备测试）
+- ThunderBolt/USB-C 应该不行（没设备测试）
 - 低亮度会有轻微闪屏
-- 电量百分比刷新不及时（等大神解决）
 
 ### 硬件准备
 
@@ -276,7 +275,7 @@ kexts
 
 ### 安装其他辅助app
 
-我在`HS_Beta`或**我Repo提供的文件**里提供了一个叫`Other`的文件夹，里面有两个文件夹：`ComboJack`和`VoodooPS2Daemon`，我们先来处理`ComboJack`。
+我在`HS_Beta`或**我Repo提供的文件**里提供了一个叫`Other`的文件夹，里面有几个文件夹，我们先来处理`ComboJack`。
 
 #### ComboJack
 
@@ -300,6 +299,18 @@ kexts
     ![](http://darkhandz.qiniudn.com/2017-07-27-15009537096412.jpg)
 
 它的作用嘛……我忘了，你稍后自行搜索呗？
+
+#### LE
+
+这个文件夹的东西是要安装到`/Library/Extensions/`里面的。
+
+- 执行命令：`sudo cp -r 把AppleGraphicsDevicePolicyInjector.kext拖过来 /Library/Extensions/`
+- 执行命令：`sudo cp -r 把X86PlatformPluginInjector.kext拖过来 /Library/Extensions/`
+- 执行命令：`sudo kextcache -i /`
+
+第一条命令的`AppleGraphicsDevicePolicyInjector.kext`是用来打开`MacBookPro13,3`这个SMBIOS的HDMI图像输出的。
+第二条命令的`X86PlatformPluginInjector.kext`是用来让CPU获得0.8GHz的最低频率的。
+第三条是重建缓存，让前面两个驱动在重启后生效。
 
 ### 其他
 
