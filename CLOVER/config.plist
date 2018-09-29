@@ -4,21 +4,21 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>AutoMerge</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
+			<key>DropOEM_DSM</key>
+			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>FIX_RTC_20000</key>
-				<true/>
-				<key>FIX_TMR_40000</key>
-				<true/>
-				<key>FixHPET_0010</key>
+				<key>FixHPET</key>
 				<false/>
-				<key>FixHeaders_20000000</key>
+				<key>FixIPIC</key>
 				<true/>
-				<key>FixIPIC_0040</key>
+				<key>FixRTC</key>
 				<true/>
-				<key>NewWay_80000000</key>
+				<key>FixTMR</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
@@ -188,6 +188,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>
 					SERBUw==
@@ -199,14 +201,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change OSID to OSSD, that because of the _OSI rename patch may cause problem</string>
+					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
 					<key>Find</key>
 					<data>
 					T1NJRA==
 					</data>
 					<key>Replace</key>
 					<data>
-					T1NTRA==
+					WFNJRA==
 					</data>
 				</dict>
 				<dict>
@@ -455,8 +457,50 @@
 					WwFFQ0FYAA==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _STA to XSTA in Device GPI0, pair with SSDT-VI2C.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					R1BJMA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _CRS to XCRS in Device TPD1, pair with SSDT-VI2C.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0NSUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					WENSUw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VFBEMQ==
+					</data>
+				</dict>
 			</array>
 		</dict>
+		<key>DisabledAML</key>
+		<array>
+			<string>SSDT.aml</string>
+			<string>SSDT-XCPM.aml</string>
+			<string>SSDT-PluginType1.aml</string>
+		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -474,45 +518,37 @@
 				<string>xh_rvp10</string>
 			</dict>
 		</array>
-		<key>HaltEnabler</key>
-		<false/>
+		<key>FixHeaders</key>
+		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
-				<key>CStates</key>
-				<false/>
-				<key>PStates</key>
-				<false/>
+				<key>PluginType</key>
+				<true/>
 			</dict>
-			<key>PluginType</key>
-			<integer>1</integer>
+			<key>NoOemTableId</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1 brcmfx-country=#a abm_firstpolldelay=16000 -v</string>
+		<string>kext-dev-mode=1 dart=0 -lilubetaall</string>
 		<key>DefaultVolume</key>
 		<string>OSX</string>
-		<key>Log</key>
-		<false/>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
 		<integer>2</integer>
-		<key>XMPDetection</key>
-		<false/>
 	</dict>
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
-		<true/>
-		<key>UseARTFrequency</key>
 		<true/>
 	</dict>
 	<key>Devices</key>
@@ -554,6 +590,47 @@
 				</data>
 			</dict>
 		</array>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>
+				SAAAAA==
+				</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAbGQ==
+				</data>
+				<key>device-id</key>
+				<data>
+				GxkAAA==
+				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
+			</dict>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -561,8 +638,10 @@
 			<key>FixOwnership</key>
 			<true/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
+		<key>UseIntelHDMI</key>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -601,6 +680,8 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
@@ -609,25 +690,24 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>EDID</key>
+		<dict>
+			<key>Inject</key>
+			<false/>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
-		<key>InjectEDID</key>
-		<false/>
-		<key>ig-platform-id</key>
-		<string>0x191b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleRTC</key>
-		<true/>
-		<key>AsusAICPUPM</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
 		<true/>
@@ -660,20 +740,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
-				<key>MatchOS</key>
-				<string>10.13.x</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>AQAAdSI=</data>
-				<key>Replace</key>
-				<data>AQAA6yI=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
 				<true/>
@@ -690,54 +756,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AAAIAAIAAACYAAAAAQUJAAAEAAA=
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAIAAAEAACYAAAAAQUJAAAEAAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>10.12 fudge USB 3.1 device ID,15b68086 -&gt; 15b58086</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<string>30783135623638303836</string>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<string>30783135623538303836</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Bypass ThunderBolt3 SkipEnumeration credit kid2010 implemented by syscl</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				VUiJ5UFXQVZBVUFUU0iB7DgB
-				</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>IOThunderboltFamily</string>
-				<key>Replace</key>
-				<data>
-				VUiJ5THAXcNBVUFUU0iB7DgB
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
@@ -750,6 +768,38 @@
 				<key>Replace</key>
 				<data>
 				RiV1VHh4eHgA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+				<key>Find</key>
+				<data>
+				SU9LaXQ=
+				</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2C</string>
+				<key>Replace</key>
+				<data>
+				SU9LaXM=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+				<key>Find</key>
+				<data>
+				SU9LaXQ=
+				</data>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelLpssI2CController</string>
+				<key>Replace</key>
+				<data>
+				SU9LaXM=
 				</data>
 			</dict>
 		</array>
