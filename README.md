@@ -324,12 +324,12 @@ kexts
 这个文件夹的东西是要安装到`/Library/Extensions/`里面的。
 
 - 执行命令：`sudo cp -r 把AppleGraphicsDevicePolicyInjector.kext拖过来 /Library/Extensions/`
-- 执行命令：`sudo cp -r 把X86PlatformPluginInjector.kext拖过来 /Library/Extensions/`
+- 执行命令：`sudo cp -r 把AppleBacklightInjector.kext拖过来 /Library/Extensions/`
 - 执行命令：`sudo kextcache -i /`
 
 第一条命令的`AppleGraphicsDevicePolicyInjector.kext`是用来打开`MacBookPro13,3`这个SMBIOS的HDMI图像输出的。
-第二条命令的`X86PlatformPluginInjector.kext`是用来让CPU获得0.8GHz的最低频率的。
-第三条是重建缓存，让前面两个驱动在重启后生效。
+第二条命令的`AppleBacklightInjector.kext`是亮度调节的（可能要重启两次才生效）。
+第三条是重建缓存，让添加的第三方驱动重建缓存，在重启后生成新的缓存。
 
 ### 其他
 
